@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Victoria's Travels</title>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let check = document.querySelector("#check");
+                check.addEventListener("click", function(event) {
+                    let input = document.querySelector("input");
+                    if(input.value == "Vietnam") {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#guess").innerHTML = "Correct!";
+                    }
+                    else {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#guess").innerHTML = "Guess again!";
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Welcome to my new page!</h1>
+        <h3>What was the last country I visited?</h3>
+        <input>
+        <button id="check">Submit</button>
+        <p id="guess"></p>
+    </body>
+</html>

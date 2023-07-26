@@ -1,25 +1,24 @@
 # def function_name(arguments):
-def calculator(a, b):
-    sum = a+b
-    sub = a-b
-    # get a*b
-    # get a/b
-    # return sum, sub, a*b, a/b
-
-print(calculator(2, 5))
-
 # # print a response
-# def hello():
-#     name = input("Name: ")
-#     print("hello " + name)
-# hello()
+def hello():
+    name = input("Name: ")
+    print("hello " + name)
+hello()
 
 # # return a computation
-# def sum(a, b):
-#     return a+b
+def sum(a, b):
+    return a+b
 
-# z = sum(3, 5)
-# print(sum(z, 2))
+z = sum(3, 5)
+print(sum(z, 2))
+
+def factorial(x):
+    ans = 1
+    for i in range(1, x+1):
+        ans = ans * i
+    return ans
+
+r = factorial(5)
 
 # # return a boolean (true or false)
 # def even(x):
@@ -68,20 +67,20 @@ print(calculator(2, 5))
 # ## because mult is only defined in the function
 # print(calc(1,3))
 
-# # nested function
-# def outer_fun(a, b):
-#     square = a ** 2
+# nested function
+def outer_fun(a, b):
+    square = a * a
 
-#     # inner function
-#     def addition(a, b):
-#         return a + b
+    # inner function
+    def addition(a, b):
+        return a + b
 
-#     # call inner function from outer function
-#     add = addition(a, b)
-#     # add 5 to the result
-#     return add + 5
+    # call inner function from outer function
+    add = addition(a, b)
+    # add 5 to the result
+    return add + 5
 
-# print(outer_fun(5, 10))
+print(outer_fun(5, 10))
 
 # # recursive function
 # def factorial(x):

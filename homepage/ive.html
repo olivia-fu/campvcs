@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Uchan's Obsession: IVE</title>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function(event) {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#check").style.display = "block";
+                    document.querySelector("#check").innerHTML = "You got it!";
+                    document.querySelector("#check").style.color = "red";
+                    document.querySelector("#check").style.fontSize = "56px";
+                });
+                let incorrect = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener("click", function(event) {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#check").style.display = "none";
+                    });
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Members</h1>
+        <h3>
+            Who is an IVE member?
+        </h3>
+        <button class="incorrect">Rex</button>
+        <button class="incorrect">Michael Jackson</button>
+        <button class="incorrect">Brian</button>
+        <button class="incorrect">Sean</button>
+        <button class="correct">Rei</button>
+        <p id="check">Let's see how good you are!</p>
+    </body>
+</html>

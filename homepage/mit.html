@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Yul is Complicated</title>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function(event) {
+                    correct.style.backgroundColor = "green";
+                });
+                let incorrect = document.querySelectorAll(".incorrect");
+                for(let i = 0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener('click', function(event) {
+                    incorrect[i].style.backgroundColor = 'red';
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Meet Yul. Yul is Complicated.</h1>
+        <h3>What Yul Is:</h3>
+        <ul>
+            <li>Sussy Cat</li>
+            <li>Boat</li>
+            <li>75</li>
+            <li>Python</li>
+        </ul>
+        <a href="https://monkeytype.com">These days, Yul likes MonkeyType.</a>
+        <img src="cat.jpg" width="900" height="500">
+        <h3>Yul wants to know. What is the closest star from the sun?</h3>
+        <button class="correct">Proxima Centauri</button>
+        <button class="incorrect">Polaris A</button>
+        <button class="incorrect">Ursa Major</button>
+        <button class="incorrect">Alpha Century B</button>
+    </body>
+</html>

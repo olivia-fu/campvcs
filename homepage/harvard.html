@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Meet Andy.</title>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function(event) {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector('#feedback1').innerHTML = 'Correct';
+                });
+                let incorrect = document.querySelectorAll(".incorrect");
+                for(let i = 0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener("click", function(event) {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                };
+
+                document.querySelector("#check").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    if(input.value == "civilian") {
+                        input.style.backgroundColor = "green";
+                        document.querySelector('#feedback2').innerHTML = 'Correct';
+                    } else {
+                        input.style.backgroundColor = "red";
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <a href="andyquiz.html">Test your knowledge on Andy here!</a>
+        <h1>Nearer than you would think, love is waiting.</h1>
+        <center><img src="andy.jpg" width="250" height="350"></center>
+        <h3>This is Andy:</h3>
+        <ul>
+            <li>Pronouns - he/her/we/they</li>
+            <li>Skills - N/A</li>
+            <li>Education - Jordan's Rizz Academy</li>
+            <li>Occupation - what you don't know can't hurt you</li>
+        </ul>
+        <a href="https://www.youtube.com/watch?v=rly1kJOaUxs">Want a sneak peek of your date with Andy? Click here!</a>
+        <h3>What is Andy's rizz level?</h3>
+        <button class="incorrect">0%</button>
+        <button class="incorrect">25%</button>
+        <button class="incorrect">50%</button>
+        <button class="incorrect">75%</button>
+        <button class="incorrect">100%</button>
+        <button class="correct">200%</button>
+
+        <p id="feedback1"></p>
+
+        <h3>What is Andy's job?</h3>
+        <input>
+        <button id="check">Submit</button>
+
+        <p id="feedback2"></p>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>All About Victoria</title>
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function(event) {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#feedback").innerHTML = "Correct";
+                });
+                let incorrect = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener("click", function(event) {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#feedback").innerHTML = "Incorrect";
+                    })
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <a href="victoriatravel.html">Click here to learn about her travels!</a>
+        <h1>Victoria's Profile</h1>
+        <ul>
+            <li>Age: 11</li>
+            <li>Country: USA</li>
+            <li>Height: 149cm</li>
+            <li>Qualities in an Ideal BF: sweet, cute, helpful</li>
+        </ul>
+        <img src="cat.jpg" height="500" width="900">
+        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj92-SLiZ-AAxWntlYBHS5kB9AQtwJ6BAgiEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DM8uPvX2te0I&usg=AOvVaw3r4p0b70bCVzJh7NzSjtzv&opi=89978449">This is Victoria's favorite song!</a>
+        <h3>How many toes does a cat have?</h3>
+        <button class="incorrect">12</button>
+        <button class="incorrect">16</button>
+        <button class="correct">18</button>
+        <button class="incorrect">20</button>
+        <p id="feedback"></p>
+    </body>
+</html>
